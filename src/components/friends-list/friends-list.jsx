@@ -1,17 +1,20 @@
 import PropTypes from 'prop-types';
-import './friends-list.css';
 import styled from 'styled-components';
 
 export const FriendList = ({ friends }) => (
   <StyledList>
     {friends.map(({ id, avatar, name, isOnline }) => (
-      <Friend key={id}>
-        {isOnline ? <IsOnline /> : <NotOnline />}
-        <Avatar src={avatar} alt="User avatar" width="60" />
-        <FriendName>{name}</FriendName>
-      </Friend>
+      <FriendListItem id={id} avatar={avatar} name={name} isOnline={isOnline} />
     ))}
   </StyledList>
+);
+
+const FriendListItem = ({ id, avatar, name, isOnline }) => (
+  <Friend key={id}>
+    {isOnline ? <IsOnline /> : <NotOnline />}
+    <Avatar src={avatar} alt="User avatar" width="60" />
+    <FriendName>{name}</FriendName>
+  </Friend>
 );
 
 const StyledList = styled.ul`
