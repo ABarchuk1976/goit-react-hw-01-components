@@ -76,7 +76,7 @@ const FriendName = styled.p`
   padding: 0;
 `;
 
-const friend = {
+FriendListItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
@@ -84,5 +84,5 @@ const friend = {
 };
 
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(PropTypes.exact(friend)).isRequired,
+  friends: PropTypes.arrayOf(PropTypes.exact(FriendListItem)).isRequired,
 };

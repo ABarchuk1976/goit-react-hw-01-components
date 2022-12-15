@@ -9,6 +9,8 @@ import { Statistics } from 'components/statistics/statistics';
 import data from './components/statistics/data.json';
 import { FriendList } from 'components/friends-list/friends-list';
 import friends from './components/friends-list/friends.json';
+import { TransactionHistory } from './components/transaction-history/transaction-history.jsx';
+import transactions from './components/transaction-history/transactions.json';
 
 const Divider = styled.h3`
   font-size: 16px;
@@ -32,6 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Divider>---- Part 3 ----</Divider>
     <FriendList friends={friends} />
     <Divider>---- Part 4 ----</Divider>
-    <Divider>---- Part 5 ----</Divider>
+    <TransactionHistory items={transactions} />
+    <Divider>---- Finish ----</Divider>
   </>
 );
