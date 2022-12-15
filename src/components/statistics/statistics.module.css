@@ -22,7 +22,7 @@
   margin: 0;
 }
 
-.stat-list {
+.statlist {
   display: grid;
   gap: 0;
   row-gap: 0;
@@ -45,7 +45,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
-  background-color: #cfcfcf;
+  /* background-color: #cfcfcf; */
   border: 1px solid #ffffff;
   margin: 0;
 }

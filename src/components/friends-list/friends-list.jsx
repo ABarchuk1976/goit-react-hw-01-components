@@ -74,12 +74,12 @@ const FriendName = styled.p`
 `;
 
 const friend = {
-  avatar: PropTypes.string,
-  name: PropTypes.string,
-  isOnline: PropTypes.bool,
-  id: PropTypes.number,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(PropTypes.shape(friend)),
+  friends: PropTypes.arrayOf(PropTypes.exact(friend)).isRequired,
 };
