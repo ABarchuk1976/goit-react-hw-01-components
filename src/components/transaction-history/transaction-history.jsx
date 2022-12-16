@@ -65,3 +65,14 @@ const TableCellHeader = styled.th`
   border: 1px solid #ffffff;
   border-collapse: collapse;
 `;
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
