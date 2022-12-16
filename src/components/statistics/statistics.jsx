@@ -32,5 +32,5 @@ const stat = {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf(PropTypes.exact(stat)).isRequired,
+  data: PropTypes.arrayOf(PropTypes.exact(stat)).isRequired,
 };

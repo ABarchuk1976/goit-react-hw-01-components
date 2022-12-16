@@ -1,16 +1,15 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-export const FriendList = ({ friends }) => (
-  <StyledList>
-    {friends.map(({ id, avatar, name, isOnline }) => (
-      <FriendListItem id={id} avatar={avatar} name={name} isOnline={isOnline} />
-    ))}
-  </StyledList>
-);
+export const FriendList = ({ friends }) =>
+  friends.map(({ id, avatar, name, isOnline }) => (
+    <StyledList key={id}>
+      <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
+    </StyledList>
+  ));
 
-const FriendListItem = ({ id, avatar, name, isOnline }) => (
-  <Friend key={id}>
+const FriendListItem = ({ avatar, name, isOnline }) => (
+  <Friend>
     {isOnline ? <IsOnline /> : <NotOnline />}
     <Avatar src={avatar} alt="User avatar" width="60" />
     <FriendName>{name}</FriendName>
@@ -80,9 +79,15 @@ FriendListItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
-  id: PropTypes.number.isRequired,
 };
 
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(PropTypes.exact(FriendListItem)).isRequired,
+  friends: PropTypes.arrayOf(
+    PropTypes.exact({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
