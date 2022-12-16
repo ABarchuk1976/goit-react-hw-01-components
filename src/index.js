@@ -5,7 +5,7 @@ import { App } from './components/App.jsx';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <BrowserRouter basename="/goit-react-hw-01-components/">
-  <App />
-  // </BrowserRouter>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
