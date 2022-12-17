@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Profile from 'components/Profile/Profile';
+import Profile from 'components/Profile/Profile.jsx';
 import user from 'components/Profile/user.json';
 import Statistics from 'components/Statistics/Statistics.jsx';
 import data from 'components/Statistics/data.json';
