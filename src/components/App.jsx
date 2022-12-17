@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { Profile } from '../components/profile/profile.jsx';
-import user from '../components/profile/user.json';
-import { Statistics } from '../components/statistics/statistics.jsx';
-import data from '../components/statistics/data.json';
-import { FriendList } from '../components/friends-list/friends-list.jsx';
-import friends from '../components/friends-list/friends.json';
-import { TransactionHistory } from '../components/transaction-history/transaction-history.jsx';
-import transactions from '../components/transaction-history/transactions.json';
+import Profile from 'components/Profile/Profile';
+import user from 'components/Profile/user.json';
+import Statistics from 'components/Statistics/Statistics.jsx';
+import data from 'components/Statistics/data.json';
+import FriendList from 'components/FriendsList/FriendsList.jsx';
+import friends from 'components/FriendsList/friends.json';
+import TransactionHistory from 'components/TransactionHistory/TransactionHistory.jsx';
+import transactions from 'components/TransactionHistory/transactions.json';
 
 const Divider = styled.h3`
   font-size: 16px;
