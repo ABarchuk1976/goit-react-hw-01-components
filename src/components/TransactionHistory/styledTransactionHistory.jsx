@@ -27,7 +27,7 @@ export const TableBody = styled.tbody`
 `;
 
 export const TableRow = styled.tr`
-  &: nth-child(2n) {
+  :nth-child(2n)  {
     background-color: #ececec;
   }
 `;
